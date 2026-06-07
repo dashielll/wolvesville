@@ -145,7 +145,6 @@ class Game{
   Player players[16];
   int alivePlayers(RoleType team);
   int totalAlive();
-  int dousedCount();
   void extraKills(int id);
   void extraExtraKills(int id,int flag=1);
   void createRoles();
@@ -1410,16 +1409,6 @@ int Game::totalAlive(){
   int count=0;
   for(int i=0;i<16;i++){
     if(players[i].isAlive){
-      count++;
-    }
-  }
-  return count;
-}
-
-int Game::dousedCount(){
-  int count=0;
-  for(int i=0;i<16;i++){
-    if(players[i].isDoused){
       count++;
     }
   }
